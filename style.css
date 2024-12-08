@@ -1,0 +1,298 @@
+/* global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+.page {
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    flex: 1;
+    justify-content: space-evenly;
+    padding: 0 4vw;
+}
+
+.back-to-top img {
+    height: 32px;
+    width: 32px;
+}
+
+h1 {
+    font-family: "Alexandria", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+p,
+label {
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 332px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-family: "Carme", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-family: "Carme", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    p,
+    label {
+        font-family: "Carme", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* pages */
+#home {
+    grid-template-rows: 56px 1.2fr 1fr 1.6fr;
+    background-color: #ffffff;
+    color: #262c3e;
+}
+
+#about {
+    grid-template-rows: 56px 3fr 1fr 48px;
+    background-color: #262c3e;
+    color: #ffffff;
+}
+
+#gallery {
+    grid-template-rows: 56px 1fr 56px;
+    height: 200vh;
+    background-color: #ffffff;
+    color: #262c3e;
+}
+
+#events {
+    grid-template-rows: 56px 1fr 32px 80px;
+    background-color: #ffffff;
+    color: #262c3e;
+}
+
+#contact {
+    grid-template-rows: 56px 1fr 56px 112px;
+    background-color: #262c3e;
+    color: #ffffff;
+}
+
+/* home */
+header {
+    background-color: #262c3e;
+    color: #ffffff;
+}
+
+#logo-container {
+    flex: 1;
+}
+
+#logo-container img {
+    width: 48px;
+}
+
+
+
+#title-container {
+    flex: 4;
+}
+
+#header-spacer {
+    flex: 0.2;
+}
+
+@media (min-width: 400px) {
+    #header-spacer {
+        flex: 0.6;
+    }
+}
+
+@media (min-width: 500px) {
+    #header-spacer {
+        flex: 1;
+    }
+}
+
+#subtitle-container {
+    height: 44px;
+}
+
+nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4vw;
+    padding: 4vw;
+}
+
+nav a {
+    position: relative;
+}
+
+nav span {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+nav img {
+    filter: grayscale(0.4) brightness(0.6);
+}
+
+/* about */
+#about h4 {
+    margin: 0.4rem 0;
+}
+
+#about-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    padding: 4vw;
+}
+
+/* gallery */
+#gallery-grid .image-container {
+    width: 100%;
+    margin: 4vw 0;
+}
+
+/* events */
+#events-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 4vw;
+    padding: 4vw;
+}
+
+.grid-item h3 {
+    margin: 0.4rem 0 0;
+}
+
+button {
+    all: unset;
+    display: block;
+    width: 132px;
+    height: 42px;
+    border-radius: 30px;
+    background-color: #262c3e;
+    color: #ffffff;
+    font-family: "Carme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+/* contact */
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr; 
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 1vh;
+    margin-left: 10.5%;
+}
+
+input {
+    height: 2rem;
+    width: 80vw;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
+}
+
+footer h3,
+footer a {
+    margin: 2vw;
+}
+
+form button{
+    background-color: #ffffff;
+    color: #262c3e;
+}
